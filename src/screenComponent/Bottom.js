@@ -26,10 +26,10 @@ const Bottom = () => {
       </View>
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <View style={styles.btn}>
-          <Image source={require("..//img/icon/google.png")} />
+          <Image source={require("../storages/img/icon/google.png")} />
         </View>
         <View style={styles.btn}>
-          <Image source={require("../img/icon/fb.png")} />
+          <Image source={require("../storages/img/icon/fb.png")} />
         </View>
       </View>
     </View>

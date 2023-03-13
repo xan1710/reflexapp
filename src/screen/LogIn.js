@@ -105,7 +105,10 @@ const LogIn = () => {
             />
           </Pressable>
         </View>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => navigation.push("Tabs")}
+        >
           <Text style={styles.text}>Đăng nhập</Text>
         </TouchableOpacity>
         <View style={{ marginTop: "38%" }}>

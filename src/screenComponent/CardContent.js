@@ -1,14 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const Content = () => {
+const CardContent = () => {
   return (
     <View>
-      <View>
-        <Text>Bài Viết</Text>
-      </View>
+      <Text>CardContent</Text>
     </View>
   );
 };
 
-export default Content;
+export default CardContent;

@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -10,6 +10,7 @@ import Content from "../screen/Content";
 import Exercises from "../screen/Exercises";
 import Relaxtion from "../screen/Relaxtion";
 import Bookmarks from "../screen/Bookmarks";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {
@@ -65,9 +66,9 @@ function Tabs() {
         tabBarStyle: {
           position: "absolute",
           elevation: 0,
-          backgroundColor: "#FFF9EC",
+          backgroundColor: "#7B61FF",
           width: "100%",
-          height: "15%",
+          height: "10%",
           shadowColor: "#FFF9EC",
           shadowOffset: {
             width: 0,
@@ -76,6 +77,7 @@ function Tabs() {
           shadowOpacity: 0.25,
           shadowRadius: 3.5,
           elevation: 5,
+          borderRadius: 15,
         },
       }}
     >
@@ -98,7 +100,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
                 }}
               ></Image>
             </View>
@@ -125,7 +127,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
                 }}
               ></Image>
             </View>
@@ -152,7 +154,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
                 }}
               ></Image>
             </View>
@@ -179,7 +181,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
                 }}
               ></Image>
             </View>
@@ -205,7 +207,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
                 }}
               ></Image>
             </View>
@@ -223,6 +225,7 @@ const RootStack = () => {
       <Stacks.Navigator screenOptions={{ headerShown: false }}>
         <Stacks.Screen name="SignIn" component={SignIn} />
         <Stacks.Screen name="Login" component={LogIn} />
+        <Stacks.Screen name="Tabs" component={Tabs} />
       </Stacks.Navigator>
     </NavigationContainer>
   );

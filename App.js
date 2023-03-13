@@ -10,6 +10,7 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
@@ -23,19 +24,19 @@ const slides = [
     id: 1,
     title: "Khởi động đúng cách ",
     text: "luyện tập an toàn",
-    img: require("./src/img/pic_1.png"),
+    img: require("./src/storages/img/pic_1.png"),
   },
   {
     id: 2,
     title: "Giãn cơ sau tập ",
     text: "thúc đẩy hiệu quả",
-    img: require("./src/img/pic_2.png"),
+    img: require("./src/storages/img/pic_2.png"),
   },
   {
     id: 3,
     title: "Cùng Balance luyện tập ",
     text: "KHOA HỌC NHẤT",
-    img: require("./src/img/pic_3.png"),
+    img: require("./src/storages/img/pic_3.png"),
   },
 ];
 

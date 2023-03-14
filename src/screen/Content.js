@@ -1,13 +1,26 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text, ScrollView } from 'react-native';
+import React from 'react';
+import CardContent from '../screenComponent/CardContent';
 
 const Content = () => {
   return (
-    <View>
-      <View>
-        <Text>Bài Viết</Text>
+    <ScrollView>
+      <View style={{ marginTop: '8%', marginLeft: '5%' }}>
+        <Text
+          style={{
+            fontWeight: '700',
+            fontSize: 20,
+            color: '#565B73',
+            textTransform: 'uppercase',
+          }}
+        >
+          Bài Viết
+        </Text>
       </View>
-    </View>
+      <View style={{ marginTop: '5%' }}>
+        <CardContent />
+      </View>
+    </ScrollView>
   );
 };
 

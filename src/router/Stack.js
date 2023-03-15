@@ -1,16 +1,17 @@
-import { View, Text, Image } from "react-native";
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
-import SignIn from "../screen/SignIn";
-import LogIn from "../screen/LogIn";
-import Home from "../screen/Home";
-import Content from "../screen/Content";
-import Exercises from "../screen/Exercises";
-import Relaxtion from "../screen/Relaxtion";
-import Bookmarks from "../screen/Bookmarks";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { View, Text, Image } from 'react-native';
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import SignIn from '../screen/SignIn';
+import LogIn from '../screen/LogIn';
+import Home from '../screen/Home';
+import Content from '../screen/Content';
+import Exercises from '../screen/Exercises';
+import Relaxtion from '../screen/Relaxtion';
+import Bookmarks from '../screen/Bookmarks';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import DetailContent from '../screen/DetailContent';
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {
@@ -24,36 +25,37 @@ function HomeStacks() {
 const ContentStack = createNativeStackNavigator();
 function ContentStacks() {
   return (
-    <HomeStack.Navigator screenOptions={{ headerShown: false }}>
-      <HomeStack.Screen name="Content Stack" component={Content} />
-    </HomeStack.Navigator>
+    <ContentStack.Navigator screenOptions={{ headerShown: false }}>
+      <ContentStack.Screen name="Content Stack" component={Content} />
+      <ContentStack.Screen name="DetailContent" component={DetailContent} />
+    </ContentStack.Navigator>
   );
 }
 
 const ExercisesStack = createNativeStackNavigator();
 function ExercisesStacks() {
   return (
-    <HomeStack.Navigator screenOptions={{ headerShown: false }}>
-      <HomeStack.Screen name="Exercises Stack" component={Exercises} />
-    </HomeStack.Navigator>
+    <ExercisesStack.Navigator screenOptions={{ headerShown: false }}>
+      <ExercisesStack.Screen name="Exercises Stack" component={Exercises} />
+    </ExercisesStack.Navigator>
   );
 }
 
 const RelaxtionStack = createNativeStackNavigator();
 function RelaxtionStacks() {
   return (
-    <HomeStack.Navigator screenOptions={{ headerShown: false }}>
-      <HomeStack.Screen name="Relaxtion Stack" component={Relaxtion} />
-    </HomeStack.Navigator>
+    <RelaxtionStack.Navigator screenOptions={{ headerShown: false }}>
+      <RelaxtionStack.Screen name="Relaxtion Stack" component={Relaxtion} />
+    </RelaxtionStack.Navigator>
   );
 }
 
 const BookmarksStack = createNativeStackNavigator();
 function BookmarksStacks() {
   return (
-    <HomeStack.Navigator screenOptions={{ headerShown: false }}>
-      <HomeStack.Screen name="Bookmarks Stack" component={Bookmarks} />
-    </HomeStack.Navigator>
+    <BookmarksStack.Navigator screenOptions={{ headerShown: false }}>
+      <BookmarksStack.Screen name="Bookmarks Stack" component={Bookmarks} />
+    </BookmarksStack.Navigator>
   );
 }
 
@@ -64,12 +66,12 @@ function Tabs() {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: "absolute",
+          position: 'absolute',
           elevation: 0,
-          backgroundColor: "#7B61FF",
-          width: "100%",
-          height: "10%",
-          shadowColor: "#FFF9EC",
+          backgroundColor: '#7B61FF',
+          width: '100%',
+          height: '10%',
+          shadowColor: '#FFF9EC',
           shadowOffset: {
             width: 0,
             height: 10,
@@ -89,18 +91,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/home.png")}
+                source={require('../storages/img/icon/home.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? '#FFFFFF' : '#D0CBF8',
                 }}
               ></Image>
             </View>
@@ -116,18 +118,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/content.png")}
+                source={require('../storages/img/icon/content.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? '#FFFFFF' : '#D0CBF8',
                 }}
               ></Image>
             </View>
@@ -143,18 +145,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/exercise.png")}
+                source={require('../storages/img/icon/exercise.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? '#FFFFFF' : '#D0CBF8',
                 }}
               ></Image>
             </View>
@@ -170,18 +172,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/relax.png")}
+                source={require('../storages/img/icon/relax.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? '#FFFFFF' : '#D0CBF8',
                 }}
               ></Image>
             </View>
@@ -196,18 +198,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/bookmark.png")}
+                source={require('../storages/img/icon/bookmark.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? '#FFFFFF' : '#D0CBF8',
                 }}
               ></Image>
             </View>

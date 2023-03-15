@@ -17,7 +17,7 @@ const Content = () => {
           Bài Viết
         </Text>
       </View>
-      <View style={{ marginTop: '5%' }}>
+      <View>
         <CardContent />
       </View>
     </ScrollView>

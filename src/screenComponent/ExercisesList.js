@@ -1,10 +1,8 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
 
-const CardContent = () => {
-  const navigation = useNavigation();
+const ExercisesList = () => {
   const cards = [
     {
       id: 1,
@@ -52,8 +50,7 @@ const CardContent = () => {
 
   return cards.map((data, index) => {
     return (
-      <TouchableOpacity
-        onPress={() => navigation.navigate('DetailContent')}
+      <View
         key={index}
         style={{
           marginHorizontal: '3%',
@@ -95,9 +92,9 @@ const CardContent = () => {
           </View>
         </View>
         <Image source={data.img} style={{ width: '22%', height: '90%' }} />
-      </TouchableOpacity>
+      </View>
     );
   });
 };
 
-export default CardContent;
+export default ExercisesList;

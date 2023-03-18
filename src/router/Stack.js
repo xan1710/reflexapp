@@ -66,15 +66,14 @@ function Tabs() {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: 'absolute',
           elevation: 0,
           backgroundColor: '#7B61FF',
           width: '100%',
-          height: '10%',
+          height: '9%',
           shadowColor: '#FFF9EC',
           shadowOffset: {
-            width: 0,
-            height: 10,
+            width: 5,
+            height: 3,
           },
           shadowOpacity: 0.25,
           shadowRadius: 3.5,

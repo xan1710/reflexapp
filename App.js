@@ -1,9 +1,9 @@
-import { AntDesign, Ionicons } from "@expo/vector-icons";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
+import { AntDesign, Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import {
   Image,
   Pressable,
@@ -12,9 +12,9 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from "react-native";
-import AppIntroSlider from "react-native-app-intro-slider";
-import RootStack from "./src/router/Stack";
+} from 'react-native';
+import AppIntroSlider from 'react-native-app-intro-slider';
+import RootStack from './src/router/Stack';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,21 +22,21 @@ const Tab = createBottomTabNavigator();
 const slides = [
   {
     id: 1,
-    title: "Khởi động đúng cách ",
-    text: "luyện tập an toàn",
-    img: require("./src/storages/img/pic_1.png"),
+    title: 'Khởi động đúng cách ',
+    text: 'luyện tập an toàn',
+    img: require('./src/storages/img/pic_1.png'),
   },
   {
     id: 2,
-    title: "Giãn cơ sau tập ",
-    text: "thúc đẩy hiệu quả",
-    img: require("./src/storages/img/pic_2.png"),
+    title: 'Giãn cơ sau tập ',
+    text: 'thúc đẩy hiệu quả',
+    img: require('./src/storages/img/pic_2.png'),
   },
   {
     id: 3,
-    title: "Cùng Balance luyện tập ",
-    text: "KHOA HỌC NHẤT",
-    img: require("./src/storages/img/pic_3.png"),
+    title: 'Cùng Balance luyện tập ',
+    text: 'KHOA HỌC NHẤT',
+    img: require('./src/storages/img/pic_3.png'),
   },
 ];
 
@@ -50,9 +50,9 @@ function App() {
         <Image
           source={item.img}
           style={{
-            resizeMode: "cover",
-            height: "60%",
-            width: "100%",
+            resizeMode: 'cover',
+            height: '60%',
+            width: '100%',
           }}
         />
         <Text
@@ -60,20 +60,20 @@ function App() {
             paddingTop: 25,
             paddingBottom: 5,
             fontSize: 24,
-            color: "#7B61FF",
-            alignSelf: "center",
-            fontWeight: "400",
+            color: '#7B61FF',
+            alignSelf: 'center',
+            fontWeight: '400',
           }}
         >
           {item.title}
         </Text>
         <Text
           style={{
-            textAlign: "center",
-            color: "#7B61FF",
+            textAlign: 'center',
+            color: '#7B61FF',
             fontSize: 24,
             paddingHorizontal: 30,
-            fontWeight: "600",
+            fontWeight: '600',
           }}
         >
           {item.text}
@@ -82,24 +82,24 @@ function App() {
           {currentPage == 2 ? (
             <TouchableOpacity
               style={{
-                height: "25%",
-                width: "45%",
-                backgroundColor: "#7B61FF",
+                height: '25%',
+                width: '45%',
+                backgroundColor: '#7B61FF',
                 borderRadius: 48,
                 marginTop: 21,
-                alignItems: "center",
-                justifyContent: "center",
-                alignSelf: "center",
-                flexDirection: "row",
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignSelf: 'center',
+                flexDirection: 'row',
               }}
               onPress={onDone}
             >
               <Text
                 style={{
-                  color: "#ffff",
+                  color: '#ffff',
                   fontSize: 17,
                   lineHeight: 20,
-                  textAlign: "center",
+                  textAlign: 'center',
                   marginRight: 17,
                 }}
               >
@@ -109,7 +109,7 @@ function App() {
             </TouchableOpacity>
           ) : (
             <View style={styles.skip}>
-              <Text style={{ color: "#ADA4A5" }} onPress={onSkip}>
+              <Text style={{ color: '#ADA4A5' }} onPress={onSkip}>
                 Bỏ qua
               </Text>
             </View>
@@ -140,7 +140,7 @@ function App() {
           showSkipButton={true}
           onSlideChange={(index) => setcurrentPage(index)}
           activeDotStyle={{
-            backgroundColor: "#7B61FF",
+            backgroundColor: '#7B61FF',
             width: 30,
           }}
         />
@@ -154,21 +154,21 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonCircle: {
     width: 41,
     height: 41,
-    backgroundColor: "rgba(0,0,0,.2)",
+    backgroundColor: 'rgba(0,0,0,.2)',
     borderRadius: 30,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   skip: {
-    marginTop: "40%",
-    alignItems: "center",
-    justifyContent: "center",
+    marginTop: '40%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

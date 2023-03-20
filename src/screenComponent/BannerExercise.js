@@ -1,9 +1,9 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BannerDetail = () => {
+const BannerExercise = () => {
   const navigation = useNavigation();
   return (
     <View style={{ flex: 1 }}>
@@ -37,7 +37,7 @@ const BannerDetail = () => {
               marginLeft: "2%",
             }}
           >
-            Bài viết
+            Khởi động
           </Text>
         </View>
         <View
@@ -48,7 +48,8 @@ const BannerDetail = () => {
           }}
         >
           <Text style={{ color: "white", fontSize: 18, fontWeight: "700" }}>
-            Tại sao cần khởi động, khởi động trước khi tập đúng cách.
+            4 động tác khởi động để bắt đầu luyện tập cho bất cứ môn thể thao
+            nào
           </Text>
         </View>
       </View>
@@ -56,4 +57,4 @@ const BannerDetail = () => {
   );
 };
 
-export default BannerDetail;
+export default BannerExercise;

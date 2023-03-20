@@ -1,19 +1,34 @@
-import { View, Text, Image, ScrollView } from 'react-native';
-import React from 'react';
-import { Ionicons } from '@expo/vector-icons';
-import BannerDetail from '../screenComponent/BannerDetail';
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
+import React from "react";
+import { Ionicons } from "@expo/vector-icons";
+import BannerDetail from "../screenComponent/BannerDetail";
+import { useNavigation } from "@react-navigation/native";
 
 const DetailContent = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>
-        <View style={{ backgroundColor: 'white' }}>
+        <View
+          style={{
+            backgroundColor: "white",
+            height: "100%",
+            paddingBottom: "20%",
+          }}
+        >
           <BannerDetail />
-          <View style={{ width: '89%', alignSelf: 'center', flex: 1 }}>
+          <View style={{ width: "89%", alignSelf: "center", flex: 1 }}>
             <Text
               style={{
-                textAlign: 'justify',
-                fontStyle: 'italic',
+                textAlign: "justify",
+                fontStyle: "italic",
                 lineHeight: 18,
               }}
             >
@@ -26,11 +41,11 @@ const DetailContent = () => {
             </Text>
           </View>
           <Image
-            source={require('../storages/img/detail/image1.png')}
-            style={{ width: '90%', alignSelf: 'center', flex: 1 }}
+            source={require("../storages/img/detail/image1.png")}
+            style={{ width: "90%", alignSelf: "center", flex: 1 }}
           />
-          <View style={{ width: '90%', alignSelf: 'center', marginTop: '8%' }}>
-            <Text style={{ marginBottom: '3%', fontWeight: '700' }}>
+          <View style={{ width: "90%", alignSelf: "center", marginTop: "8%" }}>
+            <Text style={{ marginBottom: "3%", fontWeight: "700" }}>
               Tại sao cần khởi động?
             </Text>
             <View>
@@ -50,8 +65,8 @@ const DetailContent = () => {
               </Text>
             </View>
           </View>
-          <View style={{ width: '90%', alignSelf: 'center', marginTop: '8%' }}>
-            <Text style={{ marginBottom: '3%', fontWeight: '700' }}>
+          <View style={{ width: "90%", alignSelf: "center", marginTop: "8%" }}>
+            <Text style={{ marginBottom: "3%", fontWeight: "700" }}>
               Các bài tập khởi động trước khi tập
             </Text>
             <View>
@@ -71,9 +86,12 @@ const DetailContent = () => {
               </Text>
             </View>
           </View>
-          <View>
-            
-          </View>
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={() => navigation.push("ContentStack")}
+          >
+            <Text style={styles.text}>Xem các bài viết khác</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
@@ -81,3 +99,23 @@ const DetailContent = () => {
 };
 
 export default DetailContent;
+
+const styles = StyleSheet.create({
+  btn: {
+    marginTop: "9%",
+    width: "90%",
+    backgroundColor: "#7B61FF",
+    height: "6%",
+    borderRadius: 90,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+  },
+  text: {
+    color: "#ffff",
+    fontSize: 17,
+    lineHeight: 20,
+    textAlign: "center",
+    fontWeight: "700",
+  },
+});

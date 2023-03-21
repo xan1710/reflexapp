@@ -1,8 +1,10 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Foundation } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const ExerciseList = () => {
+  const navigation = useNavigation();
   const exercises = [
     {
       id: 1,
@@ -42,22 +44,25 @@ const ExerciseList = () => {
         }}
       >
         <Foundation name="list-bullet" size={24} color="black" />
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            marginLeft: "10%",
-            borderBottomWidth: 1,
-            height: 120,
-            width: "85%",
-          }}
-        >
-          <Image source={data.img} style={{ marginRight: "10%" }} />
-          <View>
-            <Text>{data.title}</Text>
-            <Text>{data.time}</Text>
-          </View>
-        </View>
+        <>
+          <TouchableOpacity
+            onPress={() => navigation.push()}
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              marginLeft: "10%",
+              borderBottomWidth: 1,
+              height: 120,
+              width: "85%",
+            }}
+          >
+            <Image source={data.img} style={{ marginRight: "10%" }} />
+            <View>
+              <Text>{data.title}</Text>
+              <Text>{data.time}</Text>
+            </View>
+          </TouchableOpacity>
+        </>
       </View>
     );
   });

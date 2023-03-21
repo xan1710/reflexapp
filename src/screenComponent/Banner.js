@@ -44,11 +44,11 @@ const Banner = () => {
             alignItems: "center",
             marginLeft: "5%",
             marginTop: "2%",
-            backgroundColor: "#D9D6F3",
-            borderColor: "#D9D6F3",
+            backgroundColor: "#F4F9FF",
+            borderColor: "#D6E5F3",
           }}
         >
-          <Text style={{ fontSize: 14, fontWeight: "600", color: "#7B61FF" }}>
+          <Text style={{ fontSize: 14, fontWeight: "600", color: "#5193E1" }}>
             Khởi động
           </Text>
         </View>

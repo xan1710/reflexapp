@@ -2,62 +2,29 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import home from "../data/home";
+import BannerDetail from "./BannerDetail";
 
 const CardContent = () => {
   const navigation = useNavigation();
-  const cards = [
-    {
-      id: 1,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard1.png"),
-    },
-    {
-      id: 2,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard2.png"),
-    },
-    {
-      id: 3,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard1.png"),
-    },
-    {
-      id: 4,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard3.png"),
-    },
-    {
-      id: 5,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard4.png"),
-    },
-    {
-      id: 6,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard5.png"),
-    },
-  ];
 
-  return cards.map((data, index) => {
+  return home.map((data, index) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate("DetailContent")}
+        onPress={() =>
+          navigation.navigate("DetailContent", {
+            img: data.img,
+            title: data.title,
+            firstContent: data.firstContent,
+            description: data.description,
+            id: data.id,
+            myComponent: <BannerDetail />,
+          })
+        }
         key={index}
         style={{
           marginHorizontal: "3%",
-          height: "15%",
+          height: 100,
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
@@ -82,7 +49,7 @@ const CardContent = () => {
               marginTop: "5%",
             }}
           >
-            <Text style={{ fontSize: 9, color: "#B0A7F8", marginRight: "5%" }}>
+            <Text style={{ fontSize: 9, color: "#5193E1", marginRight: "5%" }}>
               {data.author}
             </Text>
             <FontAwesome
@@ -94,7 +61,10 @@ const CardContent = () => {
             <Text style={{ fontSize: 9, color: "#C4C4C4" }}>{data.time}</Text>
           </View>
         </View>
-        <Image source={data.img} style={{ width: "22%", height: "80%" }} />
+        <Image
+          source={data.img}
+          style={{ width: "22%", height: 77, borderRadius: 9 }}
+        />
       </TouchableOpacity>
     );
   });

@@ -1,55 +1,63 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 const BannerDetail = () => {
   const navigation = useNavigation();
+  const route = useRoute();
   return (
     <View style={{ flex: 1 }}>
       <Image
-        source={require("../storages/img/bannerdetail.png")}
-        style={{ width: "100%", position: "absolute" }}
+        source={route.params.img}
+        style={{
+          width: "100%",
+          height: 150,
+        }}
       />
+
       <View
         style={{
-          width: "90%",
-          marginVertical: "10%",
+          width: "100%",
           alignSelf: "center",
           alignContent: "center",
+          position: "absolute",
+          backgroundColor: "rgba(0, 0, 0, 0.27)",
+          height: 150,
         }}
       >
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Ionicons name="chevron-back" size={30} color="white" />
-          </TouchableOpacity>
-
-          <Text
+        <View style={{ marginVertical: "10%", marginHorizontal: "5%" }}>
+          <View
             style={{
-              color: "white",
-              fontSize: 24,
-              fontWeight: "400",
-              marginLeft: "2%",
+              flexDirection: "row",
+              alignItems: "center",
             }}
           >
-            Bài viết
-          </Text>
-        </View>
-        <View
-          style={{
-            alignContent: "center",
-            alignItems: "center",
-            marginTop: "4%",
-          }}
-        >
-          <Text style={{ color: "white", fontSize: 18, fontWeight: "700" }}>
-            Tại sao cần khởi động, khởi động trước khi tập đúng cách.
-          </Text>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              <Ionicons name="chevron-back" size={30} color="white" />
+            </TouchableOpacity>
+
+            <Text
+              style={{
+                color: "white",
+                fontSize: 24,
+                fontWeight: "400",
+                marginLeft: "2%",
+              }}
+            >
+              Bài viết
+            </Text>
+          </View>
+          <View
+            style={{
+              marginTop: "4%",
+              marginLeft: "5%",
+            }}
+          >
+            <Text style={{ color: "white", fontSize: 18, fontWeight: "700" }}>
+              {route.params.title}
+            </Text>
+          </View>
         </View>
       </View>
     </View>

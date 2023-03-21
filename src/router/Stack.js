@@ -69,7 +69,7 @@ function Tabs() {
         tabBarShowLabel: false,
         tabBarStyle: {
           elevation: 0,
-          backgroundColor: "#7B61FF",
+          backgroundColor: "#5193E1",
           width: "100%",
           height: "9%",
           shadowColor: "#FFF9EC",
@@ -103,7 +103,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
                 }}
               ></Image>
             </View>
@@ -130,7 +130,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
                 }}
               ></Image>
             </View>
@@ -157,7 +157,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
                 }}
               ></Image>
             </View>
@@ -184,7 +184,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
                 }}
               ></Image>
             </View>
@@ -210,7 +210,7 @@ function Tabs() {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#D0CBF8",
+                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
                 }}
               ></Image>
             </View>

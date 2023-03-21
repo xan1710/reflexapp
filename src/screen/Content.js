@@ -4,7 +4,6 @@ import CardContent from "../screenComponent/CardContent";
 import { useNavigation } from "@react-navigation/native";
 
 const Content = () => {
-  const navigation = useNavigation();
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>

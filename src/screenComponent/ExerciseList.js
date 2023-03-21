@@ -1,37 +1,13 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Foundation } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 const ExerciseList = () => {
   const navigation = useNavigation();
-  const exercises = [
-    {
-      id: 1,
-      title: "Jump Rope",
-      time: "15 giây",
-      img: require("../storages/img/exercises/avt.png"),
-    },
-    {
-      id: 2,
-      title: "Jump Rope",
-      time: "15 giây",
-      img: require("../storages/img/exercises/avt.png"),
-    },
-    {
-      id: 3,
-      title: "Jump Rope",
-      time: "15 giây",
-      img: require("../storages/img/exercises/avt.png"),
-    },
-    {
-      id: 4,
-      title: "Jump Rope",
-      time: "15 giây",
-      img: require("../storages/img/exercises/avt.png"),
-    },
-  ];
-  return exercises.map((data, index) => {
+  const route = useRoute();
+  const step = route.params.description;
+  return route.params.description.map((data, index) => {
     return (
       <View
         key={index}
@@ -46,7 +22,15 @@ const ExerciseList = () => {
         <Foundation name="list-bullet" size={24} color="black" />
         <>
           <TouchableOpacity
-            onPress={() => navigation.push()}
+            onPress={() =>
+              navigation.navigate("StepExercise", {
+                title: data.title,
+                content: data.content,
+                video: data.video,
+                img: data.img,
+                step: step,
+              })
+            }
             style={{
               flexDirection: "row",
               alignItems: "center",
@@ -56,10 +40,19 @@ const ExerciseList = () => {
               width: "85%",
             }}
           >
-            <Image source={data.img} style={{ marginRight: "10%" }} />
+            <Image
+              source={data.img}
+              style={{ marginRight: "10%", height: 60, width: 80 }}
+            />
             <View>
-              <Text>{data.title}</Text>
-              <Text>{data.time}</Text>
+              <Text
+                style={{ fontSize: 16, marginBottom: "5%", fontWeight: "500" }}
+              >
+                {data.title}
+              </Text>
+              <Text style={{ fontSize: 12, fontWeight: "400" }}>
+                {data.set}
+              </Text>
             </View>
           </TouchableOpacity>
         </>

@@ -13,6 +13,9 @@ import Bookmarks from "../screen/Bookmarks";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import DetailContent from "../screen/DetailContent";
 import DetailExercise from "../screen/DetailExercise";
+import BannerDetail from "../screenComponent/BannerDetail";
+import ContentHome from "../screenComponent/ContentHome";
+import StepExercise from "../screen/StepExercise";
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {
@@ -27,7 +30,7 @@ const ContentStack = createNativeStackNavigator();
 function ContentStacks() {
   return (
     <ContentStack.Navigator screenOptions={{ headerShown: false }}>
-      <ContentStack.Screen name="ContentStack" component={Content} />
+      <ContentStack.Screen name="Content Stack" component={Content} />
       <ContentStack.Screen name="DetailContent" component={DetailContent} />
     </ContentStack.Navigator>
   );
@@ -39,6 +42,7 @@ function ExercisesStacks() {
     <ExercisesStack.Navigator screenOptions={{ headerShown: false }}>
       <ExercisesStack.Screen name="Exercises Stack" component={Exercises} />
       <ExercisesStack.Screen name="DetailExercise" component={DetailExercise} />
+      <ExercisesStack.Screen name="StepExercise" component={StepExercise} />
     </ExercisesStack.Navigator>
   );
 }

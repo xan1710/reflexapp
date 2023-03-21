@@ -2,62 +2,29 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import warmup from "../data/warmup";
+import BannerExercise_1 from "./BannerExercise_1";
 
 const ExercisesList = () => {
   const navigation = useNavigation();
-  const cards = [
-    {
-      id: 1,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard1.png"),
-    },
-    {
-      id: 2,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard2.png"),
-    },
-    {
-      id: 3,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard1.png"),
-    },
-    {
-      id: 4,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard3.png"),
-    },
-    {
-      id: 5,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard4.png"),
-    },
-    {
-      id: 6,
-      title: "Tại sao cần khởi động, khởi động trước khi tập đúng cách.",
-      author: "Nature Channel",
-      time: "1h trước",
-      img: require("../storages/img/piccard5.png"),
-    },
-  ];
 
-  return cards.map((data, index) => {
+  return warmup.map((data, index) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate("DetailExercise")}
+        onPress={() =>
+          navigation.navigate("DetailExercise", {
+            img: data.img,
+            title: data.title,
+            firstTitle: data.firstTitle,
+            description: data.description,
+            id: data.id,
+            myComponent: <BannerExercise_1 />,
+          })
+        }
         key={index}
         style={{
           marginHorizontal: "3%",
-          height: "15%",
+          height: 100,
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
@@ -94,7 +61,10 @@ const ExercisesList = () => {
             <Text style={{ fontSize: 9, color: "#C4C4C4" }}>{data.time}</Text>
           </View>
         </View>
-        <Image source={data.img} style={{ width: "22%", height: "90%" }} />
+        <Image
+          source={data.img}
+          style={{ width: "22%", height: 77, borderRadius: 9 }}
+        />
       </TouchableOpacity>
     );
   });

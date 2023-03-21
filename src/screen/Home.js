@@ -31,7 +31,7 @@ const Home = () => {
             >
               Chào Xuân An
             </Text>
-            <Text style={{ width: "80%", fontWeight: "700" }}>
+            <Text style={{ width: "80%", fontWeight: "700", color: "#4B6AB9" }}>
               Cùng nhau làm nóng cơ thể bắt đầu ngày mới nào!
             </Text>
           </View>
@@ -62,7 +62,9 @@ const Home = () => {
           }}
         >
           <Text style={{ fontSize: 16, fontWeight: "700" }}>Bài Viết</Text>
-          <TouchableOpacity onPress={() => navigation.navigate("ContentStack")}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Content Stack")}
+          >
             <Text style={{ fontSize: 16, fontWeight: "500", color: "#4B6AB9" }}>
               Xem tất cả
             </Text>

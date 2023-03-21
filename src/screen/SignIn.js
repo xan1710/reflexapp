@@ -134,7 +134,7 @@ const SignIn = () => {
             style={styles.checkbox}
             value={isChecked}
             onValueChange={setIsChecked}
-            color={isChecked ? "#4630EB" : undefined}
+            color={isChecked ? "#5193E1" : undefined}
           />
           <Text style={styles.paragraph}>
             By continuing you accept our Privacy Policy and Term of Use
@@ -157,7 +157,7 @@ const SignIn = () => {
             <Text>Bạn đã có tài khoản?</Text>
           </View>
           <TouchableOpacity onPress={() => navigation.push("Login")}>
-            <Text style={{ color: "#7B61FF" }}> Đăng nhập</Text>
+            <Text style={{ color: "#5193E1" }}> Đăng nhập</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
   btn: {
     marginTop: "6%",
     width: "100%",
-    backgroundColor: "#7B61FF",
+    backgroundColor: "#5193E1",
     height: "8%",
     borderRadius: 90,
     alignItems: "center",

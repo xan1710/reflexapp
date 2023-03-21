@@ -7,16 +7,18 @@ import {
   StyleSheet,
 } from "react-native";
 import React from "react";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import BannerExercise from "../screenComponent/BannerExercise";
 import { Foundation } from "@expo/vector-icons";
 import ExerciseList from "../screenComponent/ExerciseList";
+import BannerExercise_1 from "../screenComponent/BannerExercise_1";
 
 const DetailExercise = () => {
   const navigation = useNavigation();
+  const route = useRoute();
   return (
     <View style={{ flex: 1 }}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View
           style={{
             backgroundColor: "white",
@@ -24,8 +26,15 @@ const DetailExercise = () => {
             paddingBottom: "20%",
           }}
         >
-          <BannerExercise />
-          <View style={{ width: "89%", alignSelf: "center", flex: 1 }}>
+          <BannerExercise_1 />
+          <View
+            style={{
+              width: "89%",
+              alignSelf: "center",
+              flex: 1,
+              marginTop: "5%",
+            }}
+          >
             <Text
               style={{
                 textAlign: "justify",
@@ -33,8 +42,7 @@ const DetailExercise = () => {
                 lineHeight: 18,
               }}
             >
-              Bài khởi động Cardio gồm 4 động tác, mỗi động tác trong vòng 15s,
-              thực hiện lần lượt 4 động tác, sau đó lặp lại chu trình 1 lần nữa.
+              {route.params.firstTitle}
             </Text>
           </View>
           <View style={{ marginTop: "1%" }}>
@@ -42,7 +50,7 @@ const DetailExercise = () => {
           </View>
           <TouchableOpacity
             style={styles.btn}
-            onPress={() => navigation.push("ContentStack")}
+            onPress={() => navigation.navigate("Exercises Stack")}
           >
             <Text style={styles.text}>Xem các bài viết khác</Text>
           </TouchableOpacity>
@@ -58,7 +66,7 @@ const styles = StyleSheet.create({
   btn: {
     marginTop: "9%",
     width: "90%",
-    backgroundColor: "#7B61FF",
+    backgroundColor: "#4B6AB9",
     height: 60,
     borderRadius: 90,
     alignItems: "center",

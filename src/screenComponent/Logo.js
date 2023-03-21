@@ -17,7 +17,7 @@ const Logo = () => {
           fontSize: 40,
           lineHeight: 48,
           fontWeight: "700",
-          color: "#7B61FF",
+          color: "#5193E1",
           textTransform: "uppercase",
         }}
       >

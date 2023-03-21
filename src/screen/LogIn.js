@@ -125,7 +125,7 @@ const LogIn = () => {
             <Text>Bạn chưa có tài khoản?</Text>
           </View>
           <TouchableOpacity onPress={() => navigation.push("SignIn")}>
-            <Text style={{ color: "#7B61FF" }}> Đăng ký</Text>
+            <Text style={{ color: "#5193E1" }}> Đăng ký</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   btn: {
     marginTop: "10%",
     width: "100%",
-    backgroundColor: "#7B61FF",
+    backgroundColor: "#5193E1",
     height: "8%",
     borderRadius: 90,
     alignItems: "center",

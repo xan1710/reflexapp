@@ -1,23 +1,38 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
-import React from "react";
-import { Feather } from "@expo/vector-icons";
-import home from "../data/home";
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Feather } from '@expo/vector-icons';
+import home from '../data/home';
+import warmup from '../data/warmup';
+import { useNavigation } from '@react-navigation/core';
+import BannerExercise_1 from './BannerExercise_1';
 
 const CardHome = () => {
+  const navigation = useNavigation();
   return (
     <View>
-      {home.slice(0, 3).map((data, index) => {
+      {warmup.slice(0, 3).map((data, index) => {
         return (
           <View
             style={{
               flex: 1,
-              alignSelf: "center",
-              justifyContent: "flex-end",
-              marginTop: "5%",
+              alignSelf: 'center',
+              justifyContent: 'flex-end',
+              marginTop: '5%',
             }}
             key={index}
           >
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('DetailExercise', {
+                  img: data.img,
+                  title: data.title,
+                  firstTitle: data.firstTitle,
+                  description: data.description,
+                  id: data.id,
+                  myComponent: <BannerExercise_1 />,
+                })
+              }
+            >
               <View>
                 <Image
                   source={data.img}
@@ -28,9 +43,9 @@ const CardHome = () => {
 
             <View
               style={{
-                position: "absolute",
-                justifyContent: "center",
-                backgroundColor: "rgba(0, 0, 0, 0.27)",
+                position: 'absolute',
+                justifyContent: 'center',
+                backgroundColor: 'rgba(0, 0, 0, 0.27)',
                 borderRadius: 15,
                 left: 2,
                 width: 372,
@@ -39,17 +54,17 @@ const CardHome = () => {
             >
               <Text
                 style={{
-                  fontWeight: "bold",
+                  fontWeight: 'bold',
                   fontSize: 12,
-                  color: "white",
-                  width: "85%",
-                  marginHorizontal: "8%",
+                  color: 'white',
+                  width: '85%',
+                  marginHorizontal: '8%',
                 }}
               >
                 {data.title}
               </Text>
             </View>
-            <View style={{ position: "absolute", top: 5, right: 6 }}>
+            <View style={{ position: 'absolute', top: 5, right: 6 }}>
               <Feather
                 name="bookmark"
                 size={24}

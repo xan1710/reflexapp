@@ -1,21 +1,21 @@
-import { View, Text, Image } from "react-native";
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
-import SignIn from "../screen/SignIn";
-import LogIn from "../screen/LogIn";
-import Home from "../screen/Home";
-import Content from "../screen/Content";
-import Exercises from "../screen/Exercises";
-import Relaxtion from "../screen/Relaxtion";
-import Bookmarks from "../screen/Bookmarks";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import DetailContent from "../screen/DetailContent";
-import DetailExercise from "../screen/DetailExercise";
-import BannerDetail from "../screenComponent/BannerDetail";
-import ContentHome from "../screenComponent/ContentHome";
-import StepExercise from "../screen/StepExercise";
+import { View, Text, Image } from 'react-native';
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import SignIn from '../screen/SignIn';
+import LogIn from '../screen/LogIn';
+import Home from '../screen/Home';
+import Content from '../screen/Content';
+import Exercises from '../screen/Exercises';
+import Relaxtion from '../screen/Relaxtion';
+import Bookmarks from '../screen/Bookmarks';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import DetailContent from '../screen/DetailContent';
+import DetailExercise from '../screen/DetailExercise';
+import BannerDetail from '../screenComponent/BannerDetail';
+import ContentHome from '../screenComponent/ContentHome';
+import StepExercise from '../screen/StepExercise';
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {
@@ -73,10 +73,10 @@ function Tabs() {
         tabBarShowLabel: false,
         tabBarStyle: {
           elevation: 0,
-          backgroundColor: "#5193E1",
-          width: "100%",
-          height: "9%",
-          shadowColor: "#FFF9EC",
+          backgroundColor: '#5193E1',
+          width: '100%',
+          height: '9%',
+          shadowColor: '#FFF9EC',
           shadowOffset: {
             width: 5,
             height: 3,
@@ -96,18 +96,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/home.png")}
+                source={require('../storages/img/icon/home.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
+                  tintColor: focused ? '#FFFFFF' : '#EAEAEA',
                 }}
               ></Image>
             </View>
@@ -123,18 +123,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/content.png")}
+                source={require('../storages/img/icon/content.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
+                  tintColor: focused ? '#FFFFFF' : '#EAEAEA',
                 }}
               ></Image>
             </View>
@@ -150,18 +150,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/exercise.png")}
+                source={require('../storages/img/icon/exercise.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
+                  tintColor: focused ? '#FFFFFF' : '#EAEAEA',
                 }}
               ></Image>
             </View>
@@ -177,18 +177,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/relax.png")}
+                source={require('../storages/img/icon/relax.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
+                  tintColor: focused ? '#FFFFFF' : '#EAEAEA',
                 }}
               ></Image>
             </View>
@@ -203,18 +203,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/img/icon/bookmark.png")}
+                source={require('../storages/img/icon/bookmark.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#FFFFFF" : "#EAEAEA",
+                  tintColor: focused ? '#FFFFFF' : '#EAEAEA',
                 }}
               ></Image>
             </View>

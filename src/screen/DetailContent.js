@@ -1,15 +1,15 @@
 import {
   View,
   Text,
-  Image,
   ScrollView,
   TouchableOpacity,
   StyleSheet,
-} from "react-native";
-import React from "react";
-import { Ionicons } from "@expo/vector-icons";
-import BannerDetail from "../screenComponent/BannerDetail";
-import { useNavigation, useRoute } from "@react-navigation/native";
+  Image,
+} from 'react-native';
+import React from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import BannerDetail from '../screenComponent/BannerDetail';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 const DetailContent = () => {
   const navigation = useNavigation();
@@ -20,24 +20,24 @@ const DetailContent = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View
           style={{
-            backgroundColor: "white",
-            height: "100%",
-            paddingBottom: "10%",
+            backgroundColor: 'white',
+            height: '100%',
+            paddingBottom: '10%',
           }}
         >
           <BannerDetail />
           <View
             style={{
-              width: "89%",
-              alignSelf: "center",
+              width: '89%',
+              alignSelf: 'center',
               flex: 1,
-              marginTop: "5%",
+              marginTop: '5%',
             }}
           >
             <Text
               style={{
-                textAlign: "justify",
-                fontStyle: "italic",
+                textAlign: 'justify',
+                fontStyle: 'italic',
                 lineHeight: 18,
               }}
             >
@@ -51,21 +51,21 @@ const DetailContent = () => {
                   <Image
                     source={data.img}
                     style={{
-                      width: "90%",
-                      alignSelf: "center",
+                      width: '90%',
+                      alignSelf: 'center',
                       height: 226,
                       flex: 1,
-                      marginTop: "5%",
+                      marginTop: '5%',
                     }}
                   />
                   <View
                     style={{
-                      width: "90%",
-                      alignSelf: "center",
-                      marginTop: "8%",
+                      width: '90%',
+                      alignSelf: 'center',
+                      marginTop: '8%',
                     }}
                   >
-                    <Text style={{ marginBottom: "3%", fontWeight: "700" }}>
+                    <Text style={{ marginBottom: '3%', fontWeight: '700' }}>
                       {data.title}
                     </Text>
                     <View>
@@ -79,7 +79,7 @@ const DetailContent = () => {
 
           <TouchableOpacity
             style={styles.btn}
-            onPress={() => navigation.push("ContentStack")}
+            onPress={() => navigation.navigate('Content Stack')}
           >
             <Text style={styles.text}>Xem các bài viết khác</Text>
           </TouchableOpacity>
@@ -93,20 +93,20 @@ export default DetailContent;
 
 const styles = StyleSheet.create({
   btn: {
-    marginTop: "9%",
-    width: "90%",
-    backgroundColor: "#4B6AB9",
+    marginTop: '9%',
+    width: '90%',
+    backgroundColor: '#4B6AB9',
     height: 60,
     borderRadius: 90,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
   text: {
-    color: "#ffff",
+    color: '#ffff',
     fontSize: 17,
     lineHeight: 20,
-    textAlign: "center",
-    fontWeight: "700",
+    textAlign: 'center',
+    fontWeight: '700',
   },
 });

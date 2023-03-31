@@ -84,9 +84,13 @@ const Home = () => {
           <Text style={{ fontSize: 16, fontWeight: "700" }}>
             Khởi động (warm up)
           </Text>
-          <Text style={{ fontSize: 16, fontWeight: "500", color: "#4B6AB9" }}>
-            Xem tất cả
-          </Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Exercises Stack")}
+          >
+            <Text style={{ fontSize: 16, fontWeight: "500", color: "#4B6AB9" }}>
+              Xem tất cả
+            </Text>
+          </TouchableOpacity>
         </View>
         <View>
           <CardHome />
@@ -102,9 +106,13 @@ const Home = () => {
           <Text style={{ fontSize: 16, fontWeight: "700" }}>
             Giãn cơ (Stretching)
           </Text>
-          <Text style={{ fontSize: 16, fontWeight: "500", color: "#4B6AB9" }}>
-            Xem tất cả
-          </Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Relaxtion Stack")}
+          >
+            <Text style={{ fontSize: 16, fontWeight: "500", color: "#4B6AB9" }}>
+              Xem tất cả
+            </Text>
+          </TouchableOpacity>
         </View>
         <View>
           <CardHome_2 />

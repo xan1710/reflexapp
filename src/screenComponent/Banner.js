@@ -1,7 +1,9 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const Banner = () => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -48,9 +50,13 @@ const Banner = () => {
             borderColor: "#D6E5F3",
           }}
         >
-          <Text style={{ fontSize: 14, fontWeight: "600", color: "#5193E1" }}>
-            Khởi động
-          </Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Exercises Stack")}
+          >
+            <Text style={{ fontSize: 14, fontWeight: "600", color: "#5193E1" }}>
+              Khởi động
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
       <View

@@ -2,8 +2,11 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import home from "../data/home";
+import { useNavigation } from "@react-navigation/native";
+import BannerDetail from "./BannerDetail";
 
 const CardHome = () => {
+  const navigation = useNavigation();
   return (
     <View>
       {home.slice(0, 3).map((data, index) => {
@@ -17,7 +20,18 @@ const CardHome = () => {
             }}
             key={index}
           >
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("DetailContent", {
+                  img: data.img,
+                  title: data.title,
+                  firstContent: data.firstContent,
+                  description: data.description,
+                  id: data.id,
+                  myComponent: <BannerDetail />,
+                })
+              }
+            >
               <View>
                 <Image
                   source={data.img}

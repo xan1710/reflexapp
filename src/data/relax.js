@@ -1,0 +1,115 @@
+export default relax = [
+  {
+    id: 1,
+    img: require("../storages/img/relax/bongda.jpg"),
+    title: "Giãn cơ sau đá bóng",
+    author: "Xuân An",
+    time: "1 giờ trước",
+    description: [
+      {
+        id: 1,
+        title: "Giãn cơ sau đá bóng",
+        img: require("../storages/img/relax/bongda.jpg"),
+        video: require("../storages/videos/bongda/video4.mp4"),
+        content: [
+          "1. Chạy bộ tại chỗ: giữ nguyên vị trí và bắt đầu chạy bộ cao gối trong 30s. có thể tăng thêm thời gian nếu bạn muốn.\n\n",
+          "2. Giãn cơ tứ đầu: đưa cẳng chân về phía sau. dùng tay kéo mu bàn chân lên sao cho chạm mông. Thực hiện 10s với mỗi chân.\n\n",
+          "3. Giãn cơ cánh tay: dơ một tay lên cao qua đầu. kéo tay sang bên còn lại sao cho cảm nhận được phần thân và tay đang giãn. Thực hiện 10s với mỗi tay.\n\n",
+          "4. Giãn bắp chân: Đưa một chân ra phía trước. Dùng tay kéo ngón chân hướng về phía cơ thể, giữ chân thẳng. Thực hiện 10s với mỗi chân.\n\n",
+          "5. Bổ sung nước cho cơ thể.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    img: require("../storages/img/relax/bongro.jpeg"),
+    title: "Các bước giãn cơ sau khi chơi bóng rổ ",
+    author: "Xuân An",
+    time: "1 giờ trước",
+    description: [
+      {
+        id: 2,
+        title: "Các bước giãn cơ sau khi chơi bóng rổ ",
+        img: require("../storages/img/relax/bongro.jpeg"),
+        video: require("../storages/videos/bongro/video4.mp4"),
+        content: [
+          "1. Chạy bộ tại chỗ: giữ nguyên vị trí và bắt đầu chạy bộ cao gối trong 30s. có thể tăng thêm thời gian nếu bạn muốn.\n\n",
+          "2. Xoay cánh tay: dang 2 cánh tay sang ngang. bắt đầu xoay theo hướng trước hoặc sau. Thực hiện 10 lần.\n\n",
+          "3. Giãn cơ đầu gối: đưa đầu gối về phía trước. dùng tay kéo mu bàn chân sau cho chạm mông. Thực hiện 10s với mỗi chân.\n\n",
+          "4. Giãn cơ gân kheo: ngồi xuống sàn và đưa 2 chân về phía trước. kéo một chân về, dùng 2 tay kéo ngón chân còn lại chĩa vào cơ thể. Thực hiện 10s với mỗi chân.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    img: require("../storages/img/relax/bongchuyen.jpg"),
+    title: "Giãn cơ sau bóng chuyền",
+    author: "Xuân An",
+    time: "1 giờ trước",
+    description: [
+      {
+        id: 3,
+        title: "Giãn cơ sau bóng chuyền",
+        img: require("../storages/img/relax/bongchuyen.jpg"),
+        video: require("../storages/videos/bongchuyen/video4.mp4"),
+        content: [
+          "1. Giãn cơ vai: đưa cánh tay phải về phía trước. dùng tay trái ép cánh tay phải vào ngực, sao cho tay trái để ở phần khuỷu tay phải. Thực hiện 10s với mỗi tay.\n\n",
+          "2. Giãn cơ tam đầu: Đưa khuỷu tay ngang cơ thể về phía đối diện. Dùng tay còn lại để cố định khuỷu tay kia. Thực hiện 10s với mỗi tay.\n\n",
+          "3. Giãn cơ tứ đầu: đưa cẳng chân về phía sau. dùng tay kéo mu bàn chân lên sao cho chạm mông. Thực hiện 10s với mỗi chân.\n\n",
+          "4. Ép dọc: Đứng trong tư thế chân trước chân sau sao cho đầu gối chân sau thẳng, chùng đầu gối chân trước xuống cho đến khi bạn ngồi song song với mặt đất. Thực hiện 10s với mỗi chân.\n\n",
+          "5. Giãn cơ gân kheo: đưa một chân về phía trước. dùng 2 tay kéo bàn chân sao cho có hướng chĩa vào cơ thể. Thực hiện 10s với mỗi chân.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    img: require("../storages/img/relax/caulong.jpg"),
+    title: "Giãn cơ sau khi chơi cầu lông",
+    author: "Xuân An",
+    time: "1 giờ trước",
+    description: [
+      {
+        id: 4,
+        title: "Giãn cơ sau khi chơi cầu lông",
+        img: require("../storages/img/relax/caulong.jpg"),
+        video: require("../storages/videos/caulong/video3.mp4"),
+        content: [
+          "1. Giãn cơ lưng dưới: nằm xuống sàn hoặc thảm. đưa đầu gối phải lên cao và dùng tay trái kèo về phía sàn nhà. mặt hướng về phía đối diện. Thực hiện với hai bên.\n\n",
+          "2. Giãn cơ mông và hông: ngồi xuống sàn, khép chân lại và đưa một chân về sau sao cho cùng phía với chân còn lại. ngả người về phía đằng trước. Thực hiện với hai bên chân.\n\n",
+          "3. Giãn cơ tứ đầu: nằm úp mặt xuống sàn, đưa cẳng chân về phía sau. dùng tay kéo cẳng chân về phía mông. Thực hiện với hai bên chân.\n\n",
+          "4. Giãn cơ gân kheo: nằm ngửa và dùng 2 tay kéo đùi lên cao sao cho đầu gối thẳng. Thực hiện với hai bên chân.\n\n",
+          "5. Giãn cơ bắp chân: tạo tư thế chó úp mặt của yoga. đưa đầu gối bên phải lên, thu về, và đưa đầu gối bên trái lên.\n\n",
+          "6. Giãn cơ vai: ngồi quỳ xuống, úp mặt và vươn người về phía trước, sao cho 2 tay kéo xa nhất có thể thể cảm nhận được sự kéo giãn của cơ.\n\n",
+          "7. Mỗi động tác thực hiện trong khoảng 30-40s.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    img: require("../storages/img/relax/dienkinh.jpg"),
+    title: "Giãn cơ sau điền kinh/chạy bộ",
+    author: "Xuân An",
+    time: "1 giờ trước",
+    description: [
+      {
+        id: 5,
+        title: "Giãn cơ sau điền kinh/chạy bộ",
+        img: require("../storages/img/relax/dienkinh.jpg"),
+        video: require("../storages/videos/dienkinh/video1.mp4"),
+        content: [
+          "1. Giãn cơ lưng dưới: nằm xuống sàn hoặc thảm. đưa đầu gối phải lên cao và dùng tay trái kèo về phía sàn nhà. mặt hướng về phía đối diện. Thực hiện với hai bên.\n\n",
+          "2. Giãn cơ mông và hông: ngồi xuống sàn, khép chân lại và đưa một chân về sau sao cho cùng phía với chân còn lại. ngả người về phía đằng trước. Thực hiện với hai bên chân.\n\n",
+          "3. Giãn cơ tứ đầu: nằm úp mặt xuống sàn, đưa cẳng chân về phía sau. dùng tay kéo cẳng chân về phía mông. Thực hiện với hai bên chân.\n\n",
+          "4. Giãn cơ gân kheo: nằm ngửa và dùng 2 tay kéo đùi lên cao sao cho đầu gối thẳng. Thực hiện với hai bên chân.\n\n",
+          "5. Giãn cơ bắp chân: tạo tư thế chó úp mặt của yoga. đưa đầu gối bên phải lên, thu về, và đưa đầu gối bên trái lên.\n\n",
+          "6. Giãn cơ vai: ngồi quỳ xuống, úp mặt và vươn người về phía trước, sao cho 2 tay kéo xa nhất có thể thể cảm nhận được sự kéo giãn của cơ.\n\n",
+          "7. Mỗi động tác thực hiện trong khoảng 30-40s.",
+        ],
+      },
+    ],
+  },
+];

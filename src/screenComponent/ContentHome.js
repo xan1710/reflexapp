@@ -1,9 +1,9 @@
-import { View, Text, Pressable, TouchableOpacity } from 'react-native';
-import React from 'react';
-import { Image } from 'react-native';
-import home from '../data/home';
-import { useNavigation } from '@react-navigation/native';
-import BannerDetail from './BannerDetail';
+import { View, Text, Pressable, TouchableOpacity } from "react-native";
+import React from "react";
+import { Image } from "react-native";
+import home from "../data/home";
+import { useNavigation } from "@react-navigation/native";
+import BannerDetail from "./BannerDetail";
 
 const ContentHome = () => {
   const navigation = useNavigation();
@@ -12,14 +12,14 @@ const ContentHome = () => {
       <View
         key={data.id}
         style={{
-          justifyContent: 'center',
-          alignItems: 'center',
+          justifyContent: "center",
+          alignItems: "center",
           flex: 1,
         }}
       >
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate('DetailContent', {
+            navigation.navigate("DetailContent", {
               img: data.img,
               title: data.title,
               firstContent: data.firstContent,
@@ -39,10 +39,10 @@ const ContentHome = () => {
           />
           <View
             style={{
-              position: 'absolute',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(0, 0, 0, 0.27)',
+              position: "absolute",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "rgba(0, 0, 0, 0.27)",
               width: 159,
               height: 159,
               borderRadius: 16,
@@ -50,11 +50,11 @@ const ContentHome = () => {
           >
             <Text
               style={{
-                fontWeight: 'bold',
+                fontWeight: "bold",
                 fontSize: 16,
-                color: 'white',
-                textAlign: 'center',
-                width: '80%',
+                color: "white",
+                textAlign: "center",
+                width: "80%",
               }}
             >
               {data.title}

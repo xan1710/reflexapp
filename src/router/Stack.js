@@ -16,6 +16,7 @@ import DetailExercise from "../screen/DetailExercise";
 import BannerDetail from "../screenComponent/BannerDetail";
 import ContentHome from "../screenComponent/ContentHome";
 import StepExercise from "../screen/StepExercise";
+import DetailRelax from "../screen/DetailRelax";
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {

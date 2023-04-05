@@ -21,7 +21,7 @@ const Logo = () => {
           textTransform: "uppercase",
         }}
       >
-        Balance
+        REFLEX
       </Text>
       <Text
         style={{

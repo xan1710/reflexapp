@@ -3,6 +3,7 @@ import React from "react";
 import { Feather } from "@expo/vector-icons";
 import home from "../data/home";
 import { useNavigation } from "@react-navigation/native";
+import BannerDetail from "./BannerDetail";
 
 const CardHome = () => {
   const navigation = useNavigation();
